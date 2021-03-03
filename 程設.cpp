@@ -1,0 +1,128 @@
+
+第一題
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	if(a>b)
+	{
+		int t=a;
+		a=b;
+		b=t;
+
+	for(int i=2;i<=a;i++)
+		{
+			if(a%i==0&&b%i==0)
+			{
+				a=a/i;
+				b=b/i;
+			}
+
+		}
+		printf("%d %d\n",b,a);
+	}else
+	{
+	for(int i=2;i<=a;i++)
+	{
+		if(a%i==0&&b%i==0)
+		{
+			a=a/i;
+			b=b/i;
+		}
+
+	}
+	printf("%d %d\n",a,b);
+	}
+}
+第二題
+#include <stdio.h>
+int main()
+{
+	int a[90],n=0;
+	for(int i=1;i<=90;i++)
+	{
+		scanf("%d",&a[i]);
+		n=n+1;
+		if(a[i]==0) break ;
+	}
+	for(int k=n-1;k>0;k--)
+	{
+		printf("%d ",a[k]);
+	}
+	printf("\n");
+
+}
+第三題
+#include <stdio.h>
+int MYPOWER(int a,int b,int c=1)
+{
+	for(int i=1;i<=b;i++)
+	{
+		c=c*a;
+	}
+	return c;
+}
+int main(void)
+{
+	int a,b;
+	scanf("%d%d",&a,&b);
+	printf("[%d]",MYPOWER(a,b));
+	return 0;
+}
+第四題
+#include<stdio.h>
+int main()
+{
+	int n,p=0;
+	scanf("%d",&n);
+	for(int i=1;i<n;i++)
+	{
+		p=p+i*(i+1);
+	}
+	printf("%d\n",p);
+}
+第五題
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d=50*%d+5*%d+1*%d\n",n,n/50,n%50/5,n%50%5/1);
+}
+第六題
+#include <stdio.h>
+int main()
+{
+	int n,a=0;
+	scanf("%d",&n);
+	for(int i=1;i<=n;i++)
+	{
+		if(n%i==0)  a=a+1;
+
+	}
+	printf("%d\n",a);
+}
+第七題
+#include <stdio.h>
+int main()
+{
+	int a[10],n=0;
+	for(int i=0;i<10;i++)
+	{
+		scanf("%d",&a[i]);
+		if(a[i]%3==0)n=n+1;
+	}
+	printf("%d\n",n);
+}
+第八題
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	if(n>=90) printf("A\n");
+	else if(n>=80) printf("B\n");
+	else if(n>=60) printf("C\n");
+	else printf("F\n");
+}
