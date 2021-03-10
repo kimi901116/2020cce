@@ -147,7 +147,7 @@ int main()
 }
 ```
 ## week 2
-##　第一題
+## 第一題
 ```c
 #include <stdio.h>
 int main()
